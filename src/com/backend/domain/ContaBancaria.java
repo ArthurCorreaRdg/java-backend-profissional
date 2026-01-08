@@ -1,4 +1,4 @@
-package com.backend.fundamentos.domain;
+package com.backend.domain;
 
 import java.math.BigDecimal;
 
@@ -16,8 +16,12 @@ public class ContaBancaria {
         return numeroConta;
     }
 
-    public BigDecimal getSaldo() {
+    public BigDecimal saldoAtual(){
         return saldo;
+    }
+
+    public boolean temSaldo(BigDecimal valor) {
+        return saldo.compareTo(valor) >=0;
     }
 
     public void depositar(BigDecimal valor) {
