@@ -1,4 +1,4 @@
-package com.backend.fundamentos;
+package com.backend.fundamentos.domain;
 
 import java.math.BigDecimal;
 

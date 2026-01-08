@@ -1,4 +1,6 @@
-package com.backend.fundamentos;
+package com.backend.fundamentos.application;
+
+import com.backend.fundamentos.domain.ContaBancaria;
 
 import java.math.BigDecimal;
 
