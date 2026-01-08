@@ -1,4 +1,4 @@
-package com.backend.fundamentos.application;
+package com.backend.fundamentos.app;
 
 import com.backend.fundamentos.domain.ContaBancaria;
 
