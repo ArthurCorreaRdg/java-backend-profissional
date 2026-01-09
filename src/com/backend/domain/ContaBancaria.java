@@ -1,5 +1,7 @@
 package com.backend.domain;
 
+import com.backend.exception.SaldoInsuficienteException;
+
 import java.math.BigDecimal;
 
 public class ContaBancaria {
@@ -26,17 +28,17 @@ public class ContaBancaria {
 
     public void depositar(BigDecimal valor) {
         if (valor.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("Valor inválido");
+            throw new SaldoInsuficienteException("Valor inválido");
         }
         saldo = saldo.add(valor);
     }
 
     public void sacar(BigDecimal valor) {
         if (valor.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new IllegalArgumentException("Valor inválido");
+            throw new SaldoInsuficienteException("Valor inválido");
         }
         if (valor.compareTo(saldo) > 0) {
-            throw new IllegalArgumentException("Saldo insuficiente");
+            throw new SaldoInsuficienteException("Saldo insuficiente");
         }
         saldo = saldo.subtract(valor);
     }
